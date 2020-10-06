@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="template/images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- J-Query -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Social media dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+<!-- BIG CARDS CONTAINER -->
+  <div class="container">
+
+
+    <!-- Header row -->
+   <div class='row'>
+    <div class="col-lg-9">
+      <h1>Social Media Dashboard</h1>
+      <p class='dim-text'>Total Followers: 23,004</p>
+      <hr>
+     </div>
+
+
+    <!-- Toogle button  -->
+     <div class="col-lg-3">
+      <div class='button-box'>
+        <p class='dim-text center'>Dark Mode</p>
+        <div class='button-align'>
+          <div class="button-div">
+            <button class="button" type="button" name="button"></button>
+          </div>
+        </div>
+      </div>
+     </div>
+  </div>
+
+
+ <!-- BIG CARDS -->
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card text-center facebook mt-4">
+          <div class='card-content-big'>
+            <p class='dim-text'><a href=""><img class='pr-2' src="template/images/icon-facebook.svg" alt="facebook icon"></a>@nathanf</p>
+            <p class="big-number">1987</p>
+            <p class="description-text">FOLLOWERS</p>
+            <span class="positive-change"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">12 Today</span>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-lg-3">
+        <div class="card text-center twitter mt-4">
+          <div class='card-content-big'>
+            <p class='dim-text'><a href=""><img class='pr-2 twitter-icon' src="template/images/icon-twitter.svg" alt="twitter icon"></a>@nathanf</p>
+            <p class="big-number">1044</p>
+            <p class="description-text">FOLLOWERS</p>
+            <span class="positive-change"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">99 Today</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card text-center instagram mt-4">
+          <div class='card-content-big'>
+            <p class='dim-text'><a href=""><img class='pr-2' src="template/images/icon-instagram.svg" alt="instagram icon"></a>@realnathanf</p>
+            <p class="big-number">11k</p>
+            <p class="description-text">FOLLOWERS</p>
+            <span class="positive-change"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">1099 Today</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card text-center youtube mt-4">
+          <div class='card-content-big'>
+            <p class='dim-text'><a href=""><img class='pr-2' src="template/images/icon-youtube.svg" alt="youtube icon"></a>Nathan F.</p>
+            <p class="big-number">8239</p>
+            <p class="description-text">SUBSCRIBERS</p>
+            <span class="negative-change"><img class='pr-1' src="template/images/icon-down.svg" alt="down icon">144 Today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- SMALL CARDS CONTAINER -->
+  <div class="container">
+    <h4 class='pt-5'>Overview - Today</h4>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card overview">
+          <div class='card-content-mini'>
+            <!-- We can set p class to display inline in order to have other elements on same line, or we can write other element
+            inside <p></p> tag as can we see below in next card -->
+            <p class='dim-text d-inline'>Page Views</p>
+            <a href=""><img class='img' src="template/images/icon-facebook.svg" alt="facebook icon"></a>
+            <p class="medium-numbers">87</p>
+            <!-- Using span to avoid collisions with toogle script -->
+            <span class="positive-change span-mini"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">3%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card overview">
+          <div class='card-content-mini'>
+            <p class='dim-text'>Likes<a href=""><img class='img' src="template/images/icon-facebook.svg" alt="facebook icon"></a></p>
+            <p class="medium-numbers">52</p>
+            <span class="negative-change span-mini"><img class='pr-1' src="template/images/icon-down.svg" alt="down icon">2%</span>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-3">
+          <div class="card overview">
+            <div class='card-content-mini'>
+              <p class='dim-text'>Likes<a href=""><img class='img' src="template/images/icon-instagram.svg" alt="instagram icon"></a></p>
+              <p class="medium-numbers">5462</p>
+              <span class="positive-change span-mini"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">2257%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card overview">
+            <div class='card-content-mini'>
+              <p class='dim-text'>Profile Views<a href=""><img class='img' src="template/images/icon-instagram.svg" alt="instagram icon"></a></p>
+              <p class="medium-numbers">52k</p>
+              <span class="positive-change span-mini"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">1375%</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card overview">
+            <div class='card-content-mini'>
+              <p class='dim-text'>Retweets<a href=""><img class='img twitter-icon' src="template/images/icon-twitter.svg" alt="twitter icon"></a></p>
+              <p class="medium-numbers">117</p>
+              <span class="positive-change span-mini"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">303%</span>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-lg-3">
+        <div class="card overview">
+          <div class='card-content-mini'>
+            <p class='dim-text'>Likes<a href=""><img class='img twitter-icon' src="template/images/icon-twitter.svg" alt="twitter icon"></a></p>
+            <p class="medium-numbers">507</p>
+            <span class="positive-change span-mini"><img class='pr-1' src="template/images/icon-up.svg" alt="up icon">553%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card overview">
+          <div class='card-content-mini'>
+            <p class='dim-text'>Likes<a href=""><img class='img' src="template/images/icon-youtube.svg" alt="youtube icon"></a></p>
+            <p class="medium-numbers">107</p>
+            <span class="negative-change span-mini"><img class='pr-1' src="template/images/icon-down.svg" alt="down icon">19%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card overview">
+          <div class='card-content-mini'>
+            <p class='dim-text'>Total Views<a href=""><img class='img' src="template/images/icon-youtube.svg" alt="youtube icon"></a></p>
+            <p class="medium-numbers pb-0">1407</p>
+            <span class="negative-change span-mini"><img class='pr-1' src="template/images/icon-down.svg" alt="down icon">12%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Attribution -->
+    <div class="attribution">
+      <p class='d-inline'>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p class='d-inline'>Coded by <a href="#">Jan Mares</a>.</p>
+    </div>
+
+  <script src="app.js" >
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+/* Most of the trouble shooting of css code is due to way I commented some things, but it shoudn't ruin functionality */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  background-repeat:no-repeat;
+
+  /* MULTIPLE COLOR BACKGROUND */
+  background-image: linear-gradient(hsl(225, 100%, 98%),hsl(225, 100%, 98%)),linear-gradient(hsl(0, 0%, 100%),hsl(0, 0%, 100%));
+  /* First gradient is right at the top, second sits 250px from top */
+  background-position: 0 0, 0 250px;
+  /* First gradient takes up 100% of width and 250px of height and second takes 100% width and covers remaining part of the page */
+  background-size: 100% 250px, 100%, cover;
+  line-height: 1.2;
+}
+
+/* BASIC CONTAINER */
+.container {
+  padding-top: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.overview {
+ margin-top: 25px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h4 {
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+}
+
+hr {
+  border-top: 2px solid hsl(228, 12%, 44%);
+}
+
+.dim-text {
+  color: hsl(228, 12%, 44%);
+}
+
+
+/* TOOGLE BUTTON */
+
+.button-box {
+  position: relative;      // So we can position button-div absolutely inside button-box
+  height: 30px;
+  margin-top: 20px;
+}
+
+.center {
+  line-height: 30px;         // Declaring Dark mode text line-height same as height of button-div, in order to center it verticaly;
+  display: inline-block;     // So we can position button on the right;
+}
+
+.button-align {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button-div {
+  max-width: 60px;       // Other way, the button would be stretched by bootstrap grid system;
+  min-width: 60px;
+  height: 30px;
+  background: hsl(230, 22%, 74%);
+  border-radius: 15px;
+  position: relative;    // Setting position to relative so we can position button absolutely against button-div;
+  right: 0;
+}
+
+.button-div:hover {
+  cursor: pointer;
+  background: linear-gradient(to right,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+
+.button {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;    // To make it circle;
+  position: absolute;
+  top: 4px;
+  /* {(button-div height) - (button height)}/2 */
+  left: 4px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  transform: translate(0px,0px);    // Switch animation;
+  transition: 0.5s;
+}
+
+
+/* CARD DESIGN */
+.card {
+  background: hsl(227, 47%, 96%);
+  border: none;
+}
+.card:hover {
+  cursor: pointer;
+  background: #D4D6DD;
+}
+.facebook {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+.instagram {
+  border-top: double 5px transparent;
+  /* first gradient is for card background, second for border background */
+  background-image: linear-gradient(hsl(227, 47%, 96%),hsl(227, 47%, 96%)), linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+
+  /* Somehow we cannot set the background similarly as for body, but we must use -clip and -origin */
+  /* Padding box means, the background fills box with including its padding (its optional for us, since we
+  havent specified any padding we could also use content-box), but doesnt exceed to borders.
+  Border-box means background runs behind borders */
+
+  background-clip: padding-box, border-box;
+  /* Here, border-box means that background images are strating from upper left corners, including border */
+  background-origin: border-box;
+
+}
+
+.instagram:hover {
+  border-top: double 5px transparent;
+  /* first gradient is for card background, second for border background */
+  background-image: linear-gradient(#D4D6DD,#D4D6DD),
+                    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.youtube {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+.twitter {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+.transform {
+  transform: translate(30px,0px);
+}
+
+/* CARD DESCRIPTION */
+
+
+  /* BIG CARD- setting container with margins */
+.card-content-big {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.big-number {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+.description-text {
+  font-weight: lighter;
+  letter-spacing: 0.4rem;
+  font-size: 0.8rem;
+}
+
+
+  /* Setting small card box to relative, so we can position elements absolutely into corners */
+.card-content-mini {
+  margin: 25px 30px 20px 30px;
+  position: relative;
+  height: 80px;
+}
+
+.medium-numbers {
+  display: inline;  // So other elements can be on same line;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+.span-mini {
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+}
+
+.img {
+  right: 0;
+  position: absolute;
+}
+
+.positive-change {
+  color: hsl(163, 72%, 41%);
+}
+
+.negative-change {
+  color: hsl(356, 69%, 56%);
+}
+.twitter-icon {
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+}
+
+/* DARK THEME PREDEFINED CLASSES */
+.dark-toogle {
+  background: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+.dark-text {
+  color: hsl(0, 0%, 100%);
+}
+.dark-body {
+  background-image: linear-gradient(hsl(232, 19%, 15%),hsl(232, 19%, 15%)),linear-gradient(hsl(230, 17%, 14%),hsl(230, 17%, 14%));
+}
+.dark-dim-text {
+  color: hsl(228, 34%, 66%);
+}
+.dark-card {
+  background: hsl(228, 28%, 20%);
+}
+.dark-card:hover {
+  background: #3C4058;
+}
+.dark-hr {
+  border-top: 2px solid hsl(228, 34%, 66%);
+}
+/* Rounded linear border is shit- it must be set very hard, and repeatedly */
+.dark-instagram {
+  border-top: double 5px transparent;
+  /* first gradient is for card background, second for border background */
+  background-image: linear-gradient(hsl(228, 28%, 20%),hsl(228, 28%, 20%)),
+                    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.dark-instagram:hover {
+  border-top: double 5px transparent;
+  background-image: linear-gradient(#3C4058,#3C4058),
+                    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  // We must separately set hover state background to instagram box;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+button:focus {
+  outline: none;
+}
+
+/* ATTRIBUTION CSS */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* This will hide horizontal rule on large screens */
+@media screen and (min-width:992px) {
+  hr {
+    visibility: hidden;
+  }
+}
