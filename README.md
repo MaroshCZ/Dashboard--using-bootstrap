@@ -11,6 +11,7 @@ I have ran across multiple challenges.
 3) Pain in ass was also linear gradient border. I had to find the solution on stackoverflow here is the solution:
    
    
+
 div-border-and-content-background {
   border-top: double 5px transparent;
   /* first gradient is for card background, second for border background */
@@ -29,5 +30,9 @@ div-border-and-content-background {
   background-origin: border-box;
   }
 
+ 
+ 
+ 
+ 
  I hope this will help someone in the future. 
  Have a nice day, John
