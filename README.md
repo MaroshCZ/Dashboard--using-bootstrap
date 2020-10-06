@@ -1,4 +1,4 @@
-# Dashboard--using-bootstrap
+# Lessons I have learned
 I made this page as a my second Frontmentor challenge. This time I have decided to use Bootstrap, which was really beneficial since I could use its grid system. Although it can be sometimes messy to deal with all the classes and predefined Bootsrap design.
 
 I have ran across multiple challenges. 
